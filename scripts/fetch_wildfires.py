@@ -11,9 +11,9 @@ API_KEY = os.getenv("NASA_API_KEY")
 # Source: VIIRS_SNPP_NRT (Visible Infrared Imaging Radiometer Suite)
 # It detects smaller fires than older satellites like MODIS.
 BASE_URL = "https://firms.modaps.eosdis.nasa.gov/api/area/csv"
-SOURCE = "VIIRS_SNPP_NRT"
+SOURCE = "MODIS_NRT"
 AREA = "world"
-DAYS = 1
+DAYS = 7
 
 OUTPUT_DIR = "data"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "wildfires_raw.csv")

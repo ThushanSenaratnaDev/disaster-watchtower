@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  # This service runs our ingestion scripts
+  ingestor:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./scripts:/app/scripts  # Map scripts too, so you can edit code without rebuilding!
+    # We keep the container alive so we can use it to run commands
+    command: tail -f /dev/null
